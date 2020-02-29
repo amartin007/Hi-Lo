@@ -14,9 +14,9 @@ new Vue({
         getRandomCardIndex(max) {
             return Math.floor(Math.random() * max);
         },
-        // newCardDeck() {
-        //     return _.clone(this.cards);
-        // }
+        newCardDeck() {
+            return _.clone(this.cards);
+        }
     },
     computed: {
         roundsLeft(){
