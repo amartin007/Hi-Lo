@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hi-Lo</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hi-Lo</h1>
+        <span v-for="dealtCard in dealtCards">
+            <img :src="'./assets/' + dealtCard + '.png'" width="200px">
+        </span>
+        <span v-for="i in roundsLeft">
+            <img :src="'./assets/red_back.png'" width="200px">
+        </span>
+        <div>
+            <button @click="deal">Deal</button>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
