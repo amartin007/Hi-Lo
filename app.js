@@ -16,6 +16,15 @@ new Vue({
         },
         newCardDeck() {
             return _.clone(this.cards);
+        },
+        getRandomNumber() {
+          let zero = 0;
+          let one = 0;
+          for(let i = 0; i < 100000000; i++) {
+            Math.round(Math.random()) == 0 ? zero++ : one++;
+          }
+          console.log(`0 = ${zero}`);
+          console.log(`1 = ${one}`);
         }
     },
     computed: {
